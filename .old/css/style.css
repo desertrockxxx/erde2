@@ -1,0 +1,20 @@
+body {
+    background-color: grey;
+}
+
+.sack{
+    background-color: pink;
+}
+.topf{
+    background-color: steelblue;
+}
+.lose{
+    background-color: green;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
