@@ -80,12 +80,23 @@ if(isset($quantity)){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom-->
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    
+    <!--Selectpicker-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
 </head>
 <body>
     
     
     
-<select id="custom-select">
+<select class="selectpicker" data-width="auto" id="custom-select">
     <option selected>select fruit</option>
     <option value="Banane">Banane</option>
     <option value="Erdbeere">Erdbeere</option>
@@ -100,14 +111,13 @@ if(isset($quantity)){
 <div class='col-lg-12'>
     <div class='row'>
         <div class='col-lg-4'>
-            <div class='sack box' id="sack" style="display:none;"><h1>Sack</h1> 
+            <div class='sack box form-group' id="sack" style="display:none;"><h1>Sack</h1> 
                 <form method='post' action='index.php'>
-                    <span id="fruit"></span>
                     <input class='hidden' type='text' value='sack' name='kondition'/>
                     <input type='text' class='fruit hidden' id='fruit1' name='fruit'/>
                     <div>
-                    <label for="sackGroesse">Größe:</label>
-                        <select name="sackGroesse">
+                        <label for="topfGroesse">Größe:</label>
+                        <select class="selectpicker" data-width="auto" name="topfGroesse">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -116,25 +126,24 @@ if(isset($quantity)){
                     </div>
                     <div>
                         <label for="quantity">Menge:</label>
-                        <input type='number' min='1' max='100' value='1' name='quantity'/>
+                        <input type='number' class="form-control" width="" min='1' max='100' value='1' name='quantity'/>
                     </div>
                     <div>
                         <input type='submit' value='Submit'/>
                     </div>
-    
-                </form>    
+                </form>   
             </div>
         </div>
     
         
         <div class='col-lg-4'>
-            <div class='topf box' id="topf" style="display:none;"><h1>Topf</h1> 
+            <div class='topf box form-group' id="topf" style="display:none;"><h1>Topf</h1> 
                 <form method='post' action='index.php'>
                     <input class='hidden' type='text' value='topf' name='kondition'/>
                     <input type='text' class='fruit hidden' id='fruit2' name='fruit'/>
                     <div>
                         <label for="topfGroesse">Größe:</label>
-                        <select name="topfGroesse">
+                        <select class="selectpicker" data-width="auto" name="topfGroesse">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -143,7 +152,7 @@ if(isset($quantity)){
                     </div>
                     <div>
                         <label for="quantity">Menge:</label>
-                        <input type='number' min='1' max='100' value='1' name='quantity'/>
+                        <input type='number' class="form-control" min='1' max='100' value='1' name='quantity'/>
                     </div>
                     <div>
                         <input type='submit' value='Submit'/>
@@ -153,25 +162,25 @@ if(isset($quantity)){
         </div>
         
         <div class='col-lg-4'>
-            <div class='lose box' id="lose" style="display:none;"><h1>Lose</h1> 
+            <div class='lose box form-group' id="lose" style="display:none;"><h1>Lose</h1> 
                 <form method='post' action='index.php'>
                     <input class='hidden' type='text' value='lose' name='kondition'/>
                     <input type='text' class='fruit hidden' id='fruit3' name='fruit'/>
                     <div>
                         <label for="x">Länge:</label>
-                        <input type='number' onchange='rechnung();' id='x' min='1' max='100' value='1'/>
+                        <input type='number' class="form-control" onchange='rechnung();' id='x' min='1' max='100' value='1'/>
                     </div>
                     <div>
                         <label for="y">Breite:</label>
-                        <input type='number' onchange='rechnung();' id='y' min='1' max='100' value='1'/>
+                        <input type='number' class="form-control" onchange='rechnung();' id='y' min='1' max='100' value='1'/>
                     </div>
                     <div>
                         <label for="z">Höhe:</label>
-                        <input type='number' onchange='rechnung();' id='z' min='1' max='100' value='1'/>
+                        <input type='number' class="form-control" onchange='rechnung();' id='z' min='1' max='100' value='1'/>
                     </div>
                     <div>
                         <label for="quantity">Menge:</label>
-                        <input type='number' id='quantity' name='quantity'/>
+                        <input type='number' class="form-control" id='quantity' name='quantity'/>
                     </div>
                     <div>
                         <input type='submit' value='Submit'/>

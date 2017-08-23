@@ -2,15 +2,6 @@ body {
     background-color: grey;
 }
 
-select{
-    width: 100%;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
-}
-
-h1
 
 .sack{
     background-color: pink;
@@ -36,8 +27,8 @@ h1
     
     background-repeat: no-repeat;
     background-position: bottom right;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 5px;
 
 }
